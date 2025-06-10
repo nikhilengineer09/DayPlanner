@@ -53,7 +53,7 @@ npm start
 
 The React app will start on http://localhost:3000
 
-## API Endpoints
+## API Endpoints 
 
 - `GET /api/todos` - Get all todos
 - `POST /api/todos` - Create a new todo

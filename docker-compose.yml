@@ -1,0 +1,24 @@
+services:
+  mongo:
+    image: mongo:5.0
+
+  frontend: 
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - REACT_APP_API_URL=/api/todos
+
+
+  backend:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    environment:
+    - MONGO_URI=mongodb://mongo:27017/todo-app
+    depends_on: 
+      - mongo

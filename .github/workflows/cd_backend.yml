@@ -22,4 +22,4 @@ jobs:
                    context: .
                    file: ./server/Dockerfile
                    push: true
-                   tags: dayPlanner:${{ github.sha }}
+                   tags: day-planner-backend:${{ github.sha }}
